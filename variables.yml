@@ -1,0 +1,36 @@
+---
+- !policy
+  id: myapp
+  body:
+    - !policy
+      id: alfa
+      body:
+        # Secret Declarations
+        - &secrets_hydrogen
+          - !variable hydrogen
+        
+        # User & Manager Groups
+        - !permit
+          role: !group /secrets-users
+          privileges: [ read, execute ]
+          resources: *secrets_hydrogen
+        - !permit
+          role: !group /secrets-managers
+          privileges: [ read, execute, update ]
+          resources: *secrets_hydrogen
+    - !policy
+      id: bravo
+      body:
+        # Secret Declarations
+        - &secrets_lithium
+          - !variable lithium
+        
+        # User & Manager Groups
+        - !permit
+          role: !group /secrets-users
+          privileges: [ read, execute ]
+          resources: *secrets_lithium
+        - !permit
+          role: !group /secrets-managers
+          privileges: [ read, execute, update ]
+          resources: *secrets_lithium

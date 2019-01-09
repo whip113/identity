@@ -1,0 +1,11 @@
+---
+- !user alice
+- !user bob
+- !group secrets-users
+- !group secrets-managers
+- !grant
+  role: !group secrets-users
+  member: !user alice
+- !grant
+  role: !group secrets-managers
+  member: !user bob
