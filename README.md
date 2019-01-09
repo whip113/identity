@@ -9,17 +9,18 @@ Conjur v5 EE appliance
 You can use other distros, but the instructions here assume Ubuntu 16.04 LTS. 
 These instructions should also work for 17.04 and 18.04 as well (or any Debian distro for that matter)
 You could also use the OSS version of Conjur with these instructions, but the instructions here assume v5 EE.
+
 -------------------------------------------------------------------------------------------------------------
 First, we'll get some pre-req's knocked out. We won't use all of these today, but I've found them to be helpful.
 #Install pre-req packages used later
-`$ sudo apt-get install -y curl \
+$ sudo apt-get install -y curl \
     apt-transport-https \
     python-pip \
     ca-certificates \
     software-properties-common \
     openssh-server \
     git
-`    
+    
 Now we'll prep for the Docker install. If you skip the next 2 steps, you'll install the wrong version of Docker. 
 These steps are distro specific, so check out the Docker documentation if you're using a different distro.
 # Add Docker Key
