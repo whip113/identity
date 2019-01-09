@@ -13,12 +13,12 @@ You could also use the OSS version of Conjur with these instructions, but the in
 Pre-Req's
 ---------
 First, we'll get some Docker pre-requisites out of the way.
-$ sudo apt-get install -y curl \
+`$ sudo apt-get install -y curl \
     apt-transport-https \
     ca-certificates \
     software-properties-common \
     openssh-server \
-    git
+    git`
     
 Now we'll prep for the Docker install. If you skip the next 2 steps, you'll install the wrong version of Docker. 
 These steps are distro specific, so check out the Docker documentation if you're using a different distro.
