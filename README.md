@@ -22,19 +22,24 @@ First, we'll get some Docker pre-requisites out of the way.
     
 Now we'll prep for the Docker install. If you skip the next 2 steps, you'll install the wrong version of Docker. 
 These steps are distro specific, so check out the Docker documentation if you're using a different distro.
-# Add Docker Key
+Add Docker Key
+--------------
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-# Add Docker Repository
+Add Docker Repository
+--------------
 $ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-# Update `apt`
+Update `apt`
+------------
 $ sudo apt-get update
 
-#Install Docker
+Install Docker
+--------------
 $ sudo apt-get install -y docker-ce
 
-# Create the `docker` group. The Docker install usually does this, but sometimes it doesn't.
+Create the `docker` group. The Docker install usually does this, but sometimes it doesn't.
+--------------
 $ sudo groupadd docker
 
 # Add our user ID to the `docker` group so we don't have to prefix Docker commands with SUDO.
